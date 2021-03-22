@@ -14,11 +14,12 @@ def saveReader():
     file.close() #closes file
     return var1 #returns to previous function with var1 status
 
-def saveWriteReq():
+def saveWriteReq(): #template, use this function in other scripts and call back
     line_ext = 3 #sets line_ext (ex. line[3])
     state_ext = '7\n' #sets state_ext (ex. 7) NOTE must be in string form, affixed with \n
     saveWriter(line_ext, state_ext) #sends variables to script for processing
     return #returns to previous function
 
-saveWriteReq() #start write process
-var1 = saveReader() #assign variable from read function
+#USAGE:
+#saveWriteReq() start write process
+#var1 = saveReader() assign variable from read function
