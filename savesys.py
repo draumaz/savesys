@@ -1,18 +1,11 @@
 def saveWriter(line_ext, state_ext): #line_ext = line number from 0, state_ext = variable on line
-    while True:
-        try:
-            file = open('data.txt', 'r') #opens the file for reading
-            line = file.readlines() #collects line information
-            line[line_ext] = state_ext #inputs state_ext on line_ext
-            file = open('data.txt', 'w') #opens file for writing
-            file.writelines(line) #writes to file
-            file.close() #closes file
-            return #returns to previous function
-        except (FileNotFoundError, IndexError): #creates file if it doesn't exist
-            file = open('data.txt', 'w') #opens file for writing
-            file.write('0\n0\n0\n0\n0\n0\n0\n0\n0\n0') #writes ten zeros on ten lines
-            file.close() #closes file
-            Execute() #returns to beginning of controller script
+    file = open('data.txt', 'r') #opens the file for reading
+    line = file.readlines() #collects line information
+    line[line_ext] = state_ext #inputs state_ext on line_ext
+    file = open('data.txt', 'w') #opens file for writing
+    file.writelines(line) #writes to file
+    file.close() #closes file
+    return #returns to previous function
 
 def saveReader():
     file = open('data.txt', 'r') #opens file for reading
