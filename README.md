@@ -4,5 +4,7 @@ Just import the python script, and you're off to the races.
 # Screenshot
 ![Ohyeah](https://github.com/draumaz/savesys/blob/main/wemble.png?raw=true "Oh Yeah")
 # How To Use
-1. Add savesys.py to your project directory and import it where necessary.
-2. View documentation in savesys
+1. import savesys
+2. line_ext = X <-- line to change
+3. state_ext = 'X\n' <-- new variable
+4. savesys.saveWriter(line_ext, state_ext)
