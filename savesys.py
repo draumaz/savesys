@@ -20,10 +20,5 @@ def saveWriteReq():
     saveWriter(line_ext, state_ext) #sends variables to script for processing
     return #returns to previous function
 
-def Execute(): #order in which functions should be called
-    saveWriteReq() #begin write process
-    var1 = saveReader() #assign var1 to proper function
-    print(var1) #optional: display variable
-    quit()
-
-Execute() #python script launch
+saveWriteReq() #start write process
+var1 = saveReader() #assign variable from read function
