@@ -1,3 +1,9 @@
+###SAVESYS, A STUPIDLY EASY SAVE SYSTEM###
+###WRITTEN BY DRAUMAZ###
+###LICENSE: BSD 3-CLAUSE###
+
+###SCRIPTS###
+
 def saveWriter(line_ext, state_ext): #line_ext = line number from 0, state_ext = variable on line
     state_write = str(state_ext) + '\n' #converts state_ext to string and affixes '\n' to write without splash damage
     file = open('data.txt', 'r') #opens the file for reading
@@ -10,15 +16,15 @@ def saveWriter(line_ext, state_ext): #line_ext = line number from 0, state_ext =
 def saveReader():
     file = open('data.txt', 'r') #opens file for reading
     line = file.readlines() #collects line information
-    var1 = int(line[3]) #assigns line[3] to var1 as integer
+    a = int(line[0]) #assigns lines to variables, this should
+    b = int(line[1]) #be infinitely configurable.
+    c = int(line[2])
+    d = int(line[3])
+    e = int(line[4])
     file.close() #closes file
-    return var1 #returns to previous function with var1 status
+    return [a, b, c, d, e] #returns variables in an array
 
-def saveWriteReq(): #template, use this function in other scripts and call back
-    line_ext = 3 #sets line_ext (ex. line[3])
-    state_ext = 7 #sets state_ext (ex. 7)
-    saveWriter(line_ext, state_ext) #sends variables to script for processing
-
-#USAGE:
-#saveWriteReq() start write process
-#var1 = saveReader() assign variable from read function
+def saveGeneration(): #Save generator
+    file = open('data.txt', 'w+') #creates new file
+    file.write('0\n0\n0\n0\n0') #writes 5 zeroes (configurable)
+    file.close() #closes the file
