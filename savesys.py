@@ -6,12 +6,12 @@
 
 def saveWriter(line_ext, state_ext): #line_ext = line number from 0, state_ext = variable on line
     state_write = str(state_ext) + '\n' #converts state_ext to string and affixes '\n' to write without splash damage
-    file = open('data.txt', 'r') #opens the file for reading
-    line = file.readlines() #collects line information
+    f = open('data.txt', 'r') #opens the file for reading
+    line = f.readlines() #collects line information
     line[line_ext] = state_write #inputs state variable on supplied line
-    file = open('data.txt', 'w') #opens file for writing
-    file.writelines(line) #writes to file
-    file.close() #closes file
+    f = open('data.txt', 'w') #opens file for writing
+    f.writelines(line) #writes to file
+    f.close() #closes file
 
 def saveReader():
     file = open('data.txt', 'r') #opens file for reading
@@ -25,6 +25,6 @@ def saveReader():
     return [a, b, c, d, e] #returns variables in an array
 
 def saveGeneration(): #Save generator
-    file = open('data.txt', 'w+') #creates new file
-    file.write('0\n0\n0\n0\n0') #writes 5 zeroes (configurable)
-    file.close() #closes the file
+    f = open('data.txt', 'w+') #creates new file
+    f.write('0\n0\n0\n0\n0') #writes 5 zeroes (configurable)
+    f.close() #closes the file

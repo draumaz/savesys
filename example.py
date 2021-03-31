@@ -17,7 +17,7 @@ var2 = variables[1] #assign var2 to line 1
 print("Your second variable is", var2, end="") 
 print(".")
 
-time.sleep(2)
+time.sleep(1)
 
 line_ext = 1 #assign line 1 for writing
 state_ext = 2 #change state to 2
