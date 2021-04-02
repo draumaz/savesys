@@ -21,10 +21,14 @@ def saveReader():
     c = int(line[2])
     d = int(line[3])
     e = int(line[4])
+    #f = int(line[5])
+    #g = int(line[6])
+    #h = int(line[7])
+    #and so on...
     file.close() #closes file
-    return [a, b, c, d, e] #returns variables in an array
+    return [a, b, c, d, e] #returns variables in an array, add to array if you have added more variables e.g. [a, b, c, d, e, f, g, h, coolvariable, epicvariable]
 
 def saveGeneration(): #Save generator
     f = open('data.txt', 'w+') #creates new file
-    f.write('0\n0\n0\n0\n0') #writes 5 zeroes (configurable)
+    f.write('0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0') #writes 15 zeroes (configurable, must match amount of variables in saveReader)
     f.close() #closes the file
