@@ -1,8 +1,6 @@
 # Savesys
 A simple and clean, expandable, variable-based save system that's stupidly easy to use.
-Just import the python script, and you're off to the races.
+Adapted from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
+
 # How To Use
-1. import savesys
-2. line_ext = X <-- line to change
-3. state_ext = X <-- new state
-4. savesys.saveWriter(line_ext, state_ext)
+Please check out the example script included for documentation.
