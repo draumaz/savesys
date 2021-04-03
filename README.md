@@ -1,5 +1,5 @@
 # Savesys
-A simple and clean, expandable, variable-based save system that's stupidly easy to use.
+A simple and clean, expandable, variable-based save system that's made to be easy to use.
 Adapted from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
 
 # How Does It Work?
