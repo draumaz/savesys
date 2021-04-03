@@ -12,7 +12,7 @@ import savesys
 savesys.saveGeneration() #Create save
 
 variables = savesys.saveReader() #Call reader
-var2 = variables[1] #assign var2 to second character in array
+var2 = variables[1] #assign var2 to second variable from array
 
 print("Your second variable is", var2, end="") 
 print(".")
