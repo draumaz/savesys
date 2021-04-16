@@ -1,8 +1,8 @@
-###SAVESYS, A STUPIDLY EASY SAVE SYSTEM###
-###WRITTEN BY DRAUMAZ###
-###LICENSE: BSD 3-CLAUSE###
+# Savesys, an easily-implementable save manager
+# Written by draumaz in 2021
+# BSD 3-Clause
 
-###EXAMPLE SCRIPT###
+# Example script
 
 import time
 import sys
