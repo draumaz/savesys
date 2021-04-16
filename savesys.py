@@ -1,8 +1,6 @@
-###SAVESYS, A STUPIDLY EASY SAVE SYSTEM###
-###WRITTEN BY DRAUMAZ###
-###LICENSE: BSD 3-CLAUSE###
-
-###SCRIPTS###
+# Savesys, an easily-implementable save manager
+# Written by draumaz in 2021
+# BSD 3-Clause
 
 def saveWriter(line_ext, state_ext): #line_ext = line number from 0, state_ext = variable on line
     state_write = str(state_ext) + '\n' #converts state_ext to string and affixes '\n' to write without splash damage
