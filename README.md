@@ -12,8 +12,8 @@ Savesys uses an external text file for managing variables.
 **saveWriter** scans the line number and new variable you pass into it and writes to the file.
 
 # How To Use
-Example: Let's say on line 6, the current variable is 0, and we want to change this to 7.
-NOTE: line_ext starts at zero, so for line six, five must be written.
+Let's say on line 6, the current variable is 0, and we want to change this to 7.
+NOTE: line_ext counts from zero; for line 6, you will want to write 5.
 
 import savesys
 
