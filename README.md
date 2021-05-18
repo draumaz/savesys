@@ -14,7 +14,7 @@ Savesys uses an external text file for managing variables.
 # How To Use
 Let's say on we want to change the variable on line six to '7'.
 
-NOTE: line_ext counts from zero; for line 6, you will want to write '5'.
+NOTE: line_ext counts from zero; for line six, you will want to write '5'.
 
 import savesys
 
