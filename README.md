@@ -12,7 +12,7 @@ Savesys uses an external text file for managing variables.
 **saveWriter** scans the line number and new variable you pass into it, and writes to the file accordingly.
 
 # How To Use
-Let's say on we want to change the variable on line six to '7'.
+Let's say on you want to change the variable on line six to '7'.
 
 NOTE: line_ext counts from zero; for line six, you will want to write '5'.
 
