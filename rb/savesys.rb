@@ -1,3 +1,7 @@
+# Savesys, an easily-implementable save manager
+# Written by draumaz in 2021
+# BSD 3-Clause
+
 def save_gen
   file = File.open('data.txt', 'w') # Create file
   File.write('data.txt', "0\n0\n0\n0\n0") # Write to file
