@@ -5,11 +5,11 @@ Adapted from the save system used in my other project, [The Plains](https://gith
 # How Does It Work?
 Savesys uses an external text file for managing variables. 
 
-**saveGeneration** can be used to generate this file. By default, it names this file 'data.txt', but this is configurable.
+**saveGeneration**/**save_gen** can be used to generate this file. By default, it names this file 'data.txt', but this is configurable.
 
-**saveReader** scans the file and assigns numbers from lines to variables, to be used however needed. You will need to adjust the array count to match your variables, please view the documentation for more information.
+**saveReader**/**save_read** scans the file and assigns numbers from lines to variables, to be used however needed. You will need to adjust the array count to match your variables, please view the documentation for more information.
 
-**saveWriter** scans the line number and new variable you pass into it, and writes to the file accordingly.
+**saveWriter**/**save_write** scans the line number and new variable you pass into it, and writes to the file accordingly.
 
 # C++ Usage
 
@@ -24,6 +24,20 @@ int line = 5;
 int state = 7;
 
 save_writer(line, state);
+
+# Ruby Usage
+
+Let's say on you want to change the variable on line six to '7'.
+
+NOTE: line counts from zero; for line six, you will want to write '5'.
+
+include './savesys'
+
+line_ext = 5
+
+state_ext = 7
+
+save_write(line_ext, state_ext)
 
 # Python Usage
 
