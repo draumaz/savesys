@@ -11,7 +11,22 @@ Savesys uses an external text file for managing variables.
 
 **saveWriter** scans the line number and new variable you pass into it, and writes to the file accordingly.
 
-# How To Use
+# C++ Usage
+
+Let's say on you want to change the variable on line six to '7'.
+
+NOTE: line counts from zero; for line six, you will want to write '5'.
+
+#include "savesys.hpp"
+
+int line = 5;
+
+int state = 7;
+
+save_writer(line, state);
+
+# Python Usage
+
 Let's say on you want to change the variable on line six to '7'.
 
 NOTE: line_ext counts from zero; for line six, you will want to write '5'.
