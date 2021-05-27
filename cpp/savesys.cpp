@@ -43,6 +43,6 @@ int * save_reader(){
 }
 
 void save_generation(){
-	std::ofstream gen("data.txt"); // Create file
-	gen << "0\n0\n0\n0\n0\n"; // Write to file
+	std::ofstream gen("data.txt"); // ADJUSTABLE: Create file
+	gen << "0\n0\n0\n0\n0\n"; // ADJUSTABLE: Write to file
 }
