@@ -11,11 +11,13 @@ Savesys uses an external text file for managing variables.
 
 **saveWriter**/**save_write** scans the line number and new variable you pass into it, and writes to the file accordingly.
 
-# C++ Usage
+# Usage Instructions
 
 Let's say on you want to change the variable on line six to '7'.
 
 NOTE: line counts from zero; for line six, you will want to write '5'.
+
+## C++ Usage
 
 #include "savesys.hpp"
 
@@ -25,25 +27,17 @@ int state = 7;
 
 save_writer(line, state);
 
-# Ruby Usage
+## Crystal Usage
 
-Let's say on you want to change the variable on line six to '7'.
+require "./savesys"
 
-NOTE: line counts from zero; for line six, you will want to write '5'.
+line = 5
 
-include './savesys'
+state = 7
 
-line_ext = 5
+save_write(line, state)
 
-state_ext = 7
-
-save_write(line_ext, state_ext)
-
-# Python Usage
-
-Let's say on you want to change the variable on line six to '7'.
-
-NOTE: line_ext counts from zero; for line six, you will want to write '5'.
+## Python Usage
 
 import savesys
 
@@ -52,3 +46,13 @@ line_ext = 5
 state_ext = 7
 
 savesys.saveWriter(line_ext, state_ext)
+
+## Ruby Usage
+
+require './savesys'
+
+line_ext = 5
+
+state_ext = 7
+
+save_write(line_ext, state_ext)
