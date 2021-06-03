@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 
-int save_writer(int line, int state){ // line - line number from 0; state - variable to insert
+void save_writer(int line, int state){ // line - line number from 0; state - variable to insert
 	int a,b,c,d,e; // ADJUSTABLE: Generate variables
 	std::ifstream write_in("data.txt"); // Open file for read
 	write_in >> a >> b >> c >> d >> e; // Assign lines to variables
@@ -26,7 +26,6 @@ int save_writer(int line, int state){ // line - line number from 0; state - vari
 	}
 	std::ofstream write_out("data.txt"); // Open file for write
 	write_out << a << "\n" << b << "\n" << c << "\n" << d << "\n" << e << "\n"; // ADJUSTABLE: Write to file
-	return 0;
 }
 
 int * save_reader(){
