@@ -10,31 +10,9 @@ end
 
 def save_write(line, state) # line - line number from 0; state - variable to insert
         write_in = save_read # Fetch current variables
-        a = write_in[0] # Expand as necessary
-        b = write_in[1]
-        c = write_in[2]
-        d = write_in[3]
-        e = write_in[4]
-        if line == 0 # Assign state to according variable
-                a = state
-        end
-        if line == 1 # Expand as necessary
-                b = state
-        end
-        if line == 2
-                c = state
-        end
-        if line == 3
-                d = state
-        end
-        if line == 4
-                e = state
-        end
-        #if line == 5
-                #f = state
-        #end
+        write_in[line] = state # Director
         write_out = File.open "data.txt", "w" # Open file
-        write_out.puts a,b,c,d,e # Write to file; expand as necessary
+        write_out.puts write_in[0],write_in[1],write_in[2],write_in[3],write_in[4] # Write to file; expand as necessary
         write_out.close # Close file
 end
 
