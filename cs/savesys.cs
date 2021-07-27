@@ -1,4 +1,4 @@
-// Savesys, an easily-implementable save manage
+// Savesys, an easily-implementable save manager
 // Written by draumaz in 2021
 // BSD 3-Clause
 
