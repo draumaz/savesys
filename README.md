@@ -18,41 +18,27 @@ Let's say on you want to change the variable on line six to '7'.
 NOTE: line counts from zero; for line six, you will want to write '5'.
 
 ## C++ Usage
-
+```
 #include "savesys.hpp"
-
-int line = 5;
-
-int state = 7;
-
-save_writer(line, state);
-
+save_writer(5, 7);
+```
 ## Crystal Usage
-
+```
 require "./savesys"
-
-line = 5
-
-state = 7
-
-save_write(line, state)
-
+save_write(5, 7)
+```
+### Java Usage
+```
+savesys sav = new savesys();
+sav.write(5, 7);
+```
 ## Python Usage
-
+```
 import savesys
-
-line_ext = 5
-
-state_ext = 7
-
-savesys.saveWriter(line_ext, state_ext)
-
+savesys.saveWriter(5, 7)
+```
 ## Ruby Usage
-
+```
 require './savesys'
-
-line_ext = 5
-
-state_ext = 7
-
-save_write(line_ext, state_ext)
+save_write(5, 7)
+```
