@@ -1,3 +1,7 @@
+// Savesys, an easily-implementable save manager
+// Written by draumaz in 2021
+// BSD 3-Clause
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
