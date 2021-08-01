@@ -17,6 +17,12 @@ Let's say on you want to change the variable on line six to '7'.
 
 NOTE: line counts from zero; for line six, you will want to write '5'.
 
+## C# Usage
+```
+using Savesys;
+Savesys sav = new();
+sav.write(5,7);
+```
 ## C++ Usage
 ```
 #include "savesys.hpp"
