@@ -15,7 +15,7 @@ Savesys uses an external text file for managing variables.
 
 Let's say on you want to change the variable on line six to '7'.
 
-NOTE: line counts from zero; for line six, you will want to write '5'.
+*NOTE: line counts from zero; for line six, you will want to write '5'.*
 
 ## C# Usage
 ```
