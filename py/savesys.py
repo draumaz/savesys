@@ -11,7 +11,7 @@ def config(pos):
         return 20 # ...and this is how many zeroes you want it to contain.
 
 def exists():
-    if (os.path.exists()): # If the file already exists, don't overwrite it...
+    if (os.path.exists(config(0))): # If the file already exists, don't overwrite it...
         pass
     else: # ...otherwise, create and write to the file!
         open(config(0), "w+").write(config(1)*"0\n")
@@ -22,4 +22,4 @@ def read():
 def write(line, state):
     i = read() # Retrieve the current states...
     i[line] = str(state) + "\n" # Replace the requested line with requested state...
-    open("data.txt", "w+").writelines(i) # ...and write it to the file!
+    open(config(0), "w+").writelines(i) # ...and write it to the file!
