@@ -17,7 +17,7 @@ def exists():
         open(config(0), "w+").write(config(1)*"0\n")
 
 def read():
-    return open(config(0), "r").readlines() # Return the entire file as an array of integers.
+    return list(map(int, open(config(0), "r").readlines())) # Return the entire file as an array of integers.
 
 def write(line, state):
     i = read() # Retrieve the current states...
