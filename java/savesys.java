@@ -17,8 +17,8 @@ class savesys {
     public static String save_name() {
         return "temp.txt"; // default filename {CONFIG}
     }
-    public static String[] save_default() {
-        return "0000000000".split(""); // default line variables {CONFIG}
+    public static int save_default() {
+        return 10; // default line variables {CONFIG}
     }
     public static void exists() {
         if (new File(save_name()).exists());
@@ -27,15 +27,15 @@ class savesys {
     }
     public static int generate() {
         try {
-                boolean boo = new File(save_name()).createNewFile(); // generate file
+                new File(save_name()).createNewFile(); // generate file
             } catch (IOException I) {
                 return 1; 
             }
             try {
                 BufferedWriter buf = null;
                 buf = new BufferedWriter(new FileWriter(save_name())); // open writer
-                for (int fr = 0; fr < save_default().length; fr++) { 
-                    buf.write(save_default()[fr]+"\n"); // loop write save_default() variables
+                for (int fr = 0; fr < save_default(); fr++) { 
+                    buf.write(0+"\n"); // loop write save_default() variables
                 }
                 buf.flush();
                 buf.close();
@@ -45,7 +45,7 @@ class savesys {
             return 0;
     }
     public static int[] read() {
-		int[] wr = new int[save_default().length]; // set array size
+		int[] wr = new int[save_default()]; // set array size
 		try {
 			List<String> z = Files.readAllLines(Paths.get(save_name())); // pull into list
 			String[] str_arr = z.stream().toArray(String[]::new); // convert to string array
@@ -61,13 +61,15 @@ class savesys {
 	}
     public static int write(int line, int state) {
 		int[] r = read(); // get current save
-		state = state < 0? 0 : state; // rounding
-		r[line] = Math.round((int)(state)); // set positioning
 		try {
 			BufferedWriter buf = null;
 			buf = new BufferedWriter(new FileWriter(save_name())); // initalize writer
-			for (int fr = 0; fr < r.length; fr++) {
-				buf.write(r[fr]+"\n"); // loop write to file
+			for (int i = 0; i < r.length; i++) {
+                if (i == line) {
+                    buf.write(Math.round((int)(state < 0? 0 : state))+"\n"); // write requested state to line
+                    continue;
+                }
+				buf.write(r[i]+"\n"); // loop write to file
 			}
 			buf.flush();
 			buf.close();
