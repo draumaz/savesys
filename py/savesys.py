@@ -8,7 +8,7 @@ def config(pos):
     if pos == 0:
         return "default.txt" # This is what you want your save to be called...
     elif pos == 1:
-        return 20 # ...and this is how many zeroes you want it to contain.
+        return 20 # ...and this is how many zeroes you want it to contain. (this starts from 0!)
 
 def exists():
     if (os.path.exists(config(0))): # If the file already exists, don't overwrite it...
