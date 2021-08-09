@@ -3,9 +3,6 @@
 // BSD 3-Clause
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.util.Arrays;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.IOException;
