@@ -35,10 +35,9 @@ save_writer(5, 7);
 require "./savesys"
 save_write(5, 7)
 ```
-### Java Usage
+## Java Usage
 ```
-savesys sav = new savesys();
-sav.write(5, 7);
+savesys.write(5, 7);
 ```
 ## Python Usage
 ```
