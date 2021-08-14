@@ -1,3 +1,9 @@
+// Savesys, an easily-implementable save manager
+// Written by draumaz in 2021
+// BSD 3-Clause
+
+using Savesys;
+
 namespace Example
 {
     public class Program
