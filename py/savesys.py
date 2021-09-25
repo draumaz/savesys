@@ -4,26 +4,25 @@
 
 import os
 
-def config(pos):
-    if pos == 0:
+def config(ndl):
+    if ndl == 0:
         return "default.txt" # This is what you want your save to be called...
-    elif pos == 1:
-        return 20 # ...and this is how many zeroes you want it to contain. (this starts from 0!)
-
+    elif ndl == 1:
+        return 20 # ...this is how many lines you want it to contain (it starts from 0!)...
+    elif ndl == 2:
+        return 0 # ...and this is what you want to fill each line with.
 def exists():
-    if (os.path.exists(config(0))): # If the file already exists, don't overwrite it...
-        pass
-    else: # ...otherwise, create and write to the file!
-        open(config(0), "w+").write(config(1)*"0\n")
+    if not (os.path.exists(config(0))): # If the file doesn't exist...
+        open(config(0), "w+").write(config(1)*(str(config(2))+"\n")) # ...create it, and fill it using config values.
 
 def read():
     return list(map(int, open(config(0), "r").readlines())) # Return the entire file as an array of integers.
 
 def write(line, state):
-    i = read() # Retrieve the current states...
+    arr = read() # Retrieve the current states...
     f = open(config(0), "w") # ...open the file...
-    for x in range (0, config(1)): # ...set ranges....
-        if x == line:
-            f.write(str(state) + "\n") # ...and write the states...
+    for i in range(0, (config(1))): # ...set loop ranges....
+        if i == line:
+            f.write(str(state)+"\n") # ...if the loop matches line, write state...
             continue
-        f.write(str(i[x]) + "\n") # ...to the file!
+        f.write(str(arr[i])+"\n") # ...and write to the file!
