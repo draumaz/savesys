@@ -1,4 +1,7 @@
-# Savesys
+<p align="center">
+  <img width="369" height="166" src=https://github.com/draumaz/savesys/blob/main/logo.png?raw>
+</p>
+
 A simple and clean, expandable, variable-based save system that's made to be easy to use.
 Adapted from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
 
