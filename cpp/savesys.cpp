@@ -32,8 +32,15 @@ void save_writer(int line, int state) {
 }
 
 void save_generation(){
-	std::ofstream gen(save_name) ;
+	std::ofstream gen(save_name);
 	for (int i = 0; i < save_size; i++) {
 		gen << "0\n"; // Loop write five zeroes on new lines
+	}
+}
+
+void save_exists() {
+	std::ifstream i(save_name);
+	if (i.fail()) {
+		save_generation();
 	}
 }
