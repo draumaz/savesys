@@ -27,12 +27,8 @@ You want to change the variable on line six to '7'.
 #include "savesys.hpp"
 save_writer(5, 7);
 ```
-## Java Usage
-```
-savesys.write(5, 7);
-```
 ## Python Usage
 ```
 import savesys
-savesys.saveWriter(5, 7)
+savesys.writer(5, 7)
 ```
