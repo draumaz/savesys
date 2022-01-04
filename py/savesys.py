@@ -9,9 +9,12 @@ save_size = 20
 save_contents = "0"
 ## end config ##
 
+def gen():
+    open(save_name, "w+").write(save_size*(save_contents+"\n"))
+    
 def exists():
     if not (os.path.exists(save_name)): # If the file doesn't exist...
-        open(save_name, "w+").write(save_size*(save_contents+"\n")) # ...create it, and fill it using config values.
+        gen() # ...create it, and fill it using config values.
 
 def reader():
     return list(map(int, open(save_name, "r").readlines())) # Return the entire file as an array of integers.
