@@ -1,24 +1,18 @@
-// Savesys, an easily-implementable save manage
-// Written by draumaz in 2021
-// BSD 3-Clause
+// Savesys, an easily-implementable save manager
+// draumaz, 2021 | GPL v3
 
 #include <iostream>
 #include <fstream>
 
-const char* string_paths(int pnt) {
-	const char* path = NULL;
-	switch (pnt) {
-		case 0:
-			path = "data.txt"; // Adjustable file name
-			break;
-	}
-	return path;
-}
+// begin config //
+const int save_size = 5;
+const char* save_name = "data.txt";
+// end config //
 
 int * save_reader() {
-	static int array[5]; // Adjust number
-	std::ifstream read_in(string_paths(0));
-	for (int i = 0; i < 5; i++) { // Adjust number
+	static int array[save_size];
+	std::ifstream read_in(save_name);
+	for (int i = 0; i < save_size; i++) {
 		read_in >> array[i]; // Loop read lines into array
 	}
 	return array;
@@ -26,8 +20,8 @@ int * save_reader() {
 
 void save_writer(int line, int state) {
 	int * save_in = save_reader(); // Pull current values
-	std::ofstream save_out(string_paths(0));
-	for (int i = 0; i < 5; i++) { // Adjust number
+	std::ofstream save_out(save_name);
+	for (int i = 0; i < save_size; i++) {
 		if (i == line) {
 			save_out << state; // If loop is on supplied line, insert supplied state
 		} else {
@@ -38,8 +32,8 @@ void save_writer(int line, int state) {
 }
 
 void save_generation(){
-	std::ofstream gen(string_paths(0)) ;
-	for (int i = 0; i < 5; i++) { // Adjust number
+	std::ofstream gen(save_name) ;
+	for (int i = 0; i < save_size; i++) {
 		gen << "0\n"; // Loop write five zeroes on new lines
 	}
 }
