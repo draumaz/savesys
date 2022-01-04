@@ -1,6 +1,5 @@
 # Savesys, an easily-implementable save manager
-# Written by draumaz in 2021
-# BSD 3-Clause
+# draumaz, 2021 | GPL v2
 
 import os
 
