@@ -10,11 +10,13 @@ Savesys uses an external text file for managing variables. It's easily called by
 
 # Commands
 
-**save_generation()** is used to generate the save file. Save name and length are fully configurable.
+**save_generation()** | **savesys.gen()** is used to generate the save file. Save name and length are fully configurable.
 
-**save_reader()** scans the file and returns numbers from the lines into an array. *You will need to adjust the array count to match your variables, please view the documentation appropriate for your language of choice for more information.*
+**save_exists()** | **savesys.exists()** checks to see if the file exists and generates one if it doesn't.
 
-**save_writer(line, num)** scans the line number and new number you pass into it, and writes to the file accordingly.
+**save_reader()** | **savesys.reader()** scans the file and returns numbers from the lines into an array. *You will need to adjust the array count to match your variables, please view the documentation appropriate for your language of choice for more information.*
+
+**save_writer(line, num)** | **savesys.writer(line, num)** scans the line number and new number you pass into it, and writes to the file accordingly.
 
 # Usage Instructions
 
