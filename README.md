@@ -18,7 +18,7 @@ Savesys uses an external text file for managing variables. It's easily called by
 
 **save_writer(line, num)** | **savesys.writer(line, num)** scans the line number and new number you pass into it, and writes to the file accordingly.
 
-# Usage Instructions
+# Usage Example
 
 You want to change the variable on line six to '7'.
 
