@@ -24,9 +24,11 @@ save_writer() {
         done
 }
 
+save_generation() {
+        touch $FILE_NAME && > $FILE_NAME
+        for i in {0..4}; do echo 0 >> $FILE_NAME; done
+}
+
 save_exists() {
-        if [ ! -e $FILE_NAME ]; then
-                touch $FILE_NAME
-                for i in {0..4}; do echo 0 >> $FILE_NAME; done # ADJUST TO DESIRED LENGTH
-        fi
+        if [ ! -e $FILE_NAME ]; then save_generation; fi
 }
