@@ -26,7 +26,7 @@ save_writer() {
 
 save_generation() {
         touch $FILE_NAME && > $FILE_NAME
-        for i in {0..4}; do echo 0 >> $FILE_NAME; done
+        for i in {0..4}; do echo 0 >> $FILE_NAME; done # ADJUST TO DESIRED LENGTH
 }
 
 save_exists() {
