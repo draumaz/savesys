@@ -1,0 +1,32 @@
+# Savesys, an easily-implementable save manager
+# draumaz, 2022 | GPL v3
+
+FILE_NAME="test.txt"
+
+save_reader() {
+        while IFS= read -r line || [ -n "$line" ]; do arr+=("$line")
+        done < $FILE_NAME
+}
+
+save_refresh() { # update array
+        arr=()
+        save_reader
+}
+
+save_writer() {
+        arr=(); save_reader
+        > $FILE_NAME
+        for i in {0..4}; do # ADJUST TO DESIRED LENGTH
+                if [ "$1" == "$i" ]; then # match loop
+                        echo "$2" >> $FILE_NAME
+                fi
+                echo ${arr[$i]} >> $FILE_NAME
+        done
+}
+
+save_exists() {
+        if [ ! -e $FILE_NAME ]; then
+                touch $FILE_NAME
+                for i in {0..4}; do echo 0 >> $FILE_NAME; done # ADJUST TO DESIRED LENGTH
+        fi
+}
