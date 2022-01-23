@@ -34,3 +34,8 @@ save_writer(5, 7);
 import savesys
 savesys.writer(5, 7)
 ```
+## Bash Usage
+```
+source ./savesys.sh
+save_writer 5 7
+```
