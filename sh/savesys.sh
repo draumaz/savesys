@@ -14,7 +14,7 @@ save_refresh() { # update array
 }
 
 save_writer() {
-        save_refresh
+        save_refresh;
         > $FILE_NAME
         for i in {0..4}; do # ADJUST TO DESIRED LENGTH
                 if [ "$1" == "$i" ]; then # match loop
