@@ -2,27 +2,29 @@
   <img width="369" height="166" src=https://github.com/draumaz/savesys/blob/main/logo.png?raw>
 </p>
 
-A simple and clean, expandable, variable-based save system that's made to be easy to use.
-Adapted from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
+A simple, expandable, variable-based save system.
 
-# How Does It Work?
-Savesys uses an external text file for managing variables. It's easily called by a couple helpful commands that work silently to create the file your game needs.
+Forked from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
+
+# Function
+
+Savesys uses an external text file for managing variables. It's called by a couple commands that create files that you can later reference.
 
 # Commands
 
 **save_generation()** | **savesys.gen()** is used to generate the save file. Save name and length are fully configurable.
 
-**save_exists()** | **savesys.exists()** checks to see if the file exists and generates one if it doesn't.
+**save_exists()** | **savesys.exists()** checks to see if the file exists and generates one if not.
 
-**save_reader()** | **savesys.reader()** scans the file and returns numbers from the lines into an array. *You will need to adjust the array count to match your variables, please view the documentation appropriate for your language of choice for more information.*
+**save_reader()** | **savesys.reader()** scans the file and returns numbers from the lines into an array. *You will need to adjust the array count to match your variables, view the documentation appropriate for your language of choice for more information.*
 
-**save_writer(line, num)** | **savesys.writer(line, num)** scans the line number and new number you pass into it, and writes to the file accordingly.
+**save_writer(line, num)** | **savesys.writer(line, num)** scans the line and new number you pass in, and writes to the file accordingly.
 
 # Usage Example
 
 You want to change the variable on line six to '7'.
 
-*NOTE: line counts from zero; for line six, you will want to write '5'.*
+*NOTE: line counts from zero; for line six, you will want to write the numeral 5.*
 
 ## C++ Usage
 ```
