@@ -1,3 +1,6 @@
+// Savesys, an easily-implementable save manager
+// draumaz, 2022 | GPL v3
+
 #include <stdio.h>
 #include <unistd.h>
 
