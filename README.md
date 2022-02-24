@@ -6,11 +6,11 @@ A simple, expandable, variable-based save system.
 
 Forked from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
 
-# Function
+# Purpose
 
 Savesys uses an external text file for managing variables. It's called by a couple commands that create files that you can later reference.
 
-# Commands
+# Functions
 
 **save_generation()** | **savesys.gen()** is used to generate the save file. Save name and length are fully configurable.
 
@@ -20,6 +20,26 @@ Savesys uses an external text file for managing variables. It's called by a coup
 
 **save_writer(line, num)** | **savesys.writer(line, num)** scans the line and new number you pass in, and writes to the file accordingly.
 
+# Install
+
+#### First - clone the repo, and find the folder pertaining to the language you're going to use.
+
+### C
+
+#### Move "savesys.c" & "savesys.h" into your project.
+
+### C++
+
+#### Move "savesys.cpp" & "savesys.hpp" into your project.
+
+### Python
+
+#### Move "savesys.py" into your project.
+
+### Shell
+
+#### Move "savesys.sh" into your project.
+
 # Usage Example
 
 You want to change the variable on line six to '7'.
@@ -28,31 +48,26 @@ You want to change the variable on line six to '7'.
 
 ## C
 
-### Move "savesys.c" & "savesys.h" into your project.
-
 ```
 #include "savesys.h"
 save_writer(5, 7);
 ```
-## C++
 
-### Move "savesys.cpp" & "savesys.hpp" into your project.
+## C++
 
 ```
 #include "savesys.hpp"
 save_writer(5, 7);
 ```
-## Python
 
-### Move "savesys.py" into your project.
+## Python
 
 ```
 import savesys
 savesys.writer(5, 7)
 ```
-## Shell
 
-### Move "savesys.sh" into your project.
+## Shell
 
 ```
 source ./savesys.sh
