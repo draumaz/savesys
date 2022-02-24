@@ -1,13 +1,12 @@
 // Savesys, an easily-implementable save manager
 // draumaz, 2022 | GPL v3
 
-#include <stdio.h>
-#include <unistd.h>
-
-// begin config
+// CONFIG START //
 #define SAVE_LENGTH 12
 #define SAVE_NAME "data.txt"
-// end config
+// CONFIG END   //
+
+#include <stdio.h>
 
 int * save_reader() {
 	static int array[SAVE_LENGTH];
