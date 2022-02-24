@@ -1,4 +1,4 @@
 savesys_example:
-        gcc -Wall \
+	$(CC) -Wall \
                 example.c savesys.c savesys.h \
         -o savesys_example
