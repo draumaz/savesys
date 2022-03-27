@@ -12,13 +12,13 @@ Savesys uses an external text file for managing variables. It's called by a coup
 
 # Functions
 
-**save_generation()** | **savesys.gen()** is used to generate the save file. Save name and length are fully configurable.
+**save_generation()** is used to generate the save file. Save name and length are fully configurable.
 
-**save_exists()** | **savesys.exists()** checks to see if the file exists and generates one if not.
+**save_exists()** checks to see if the file exists and generates one if not.
 
-**save_reader()** | **savesys.reader()** scans the file and returns numbers from the lines into an array. *You will need to adjust the array count to match your variables, view the documentation appropriate for your language of choice for more information.*
+**save_reader()** scans the file and returns numbers from the lines into an array. *You will need to adjust the array count to match your variables, view the documentation appropriate for your language of choice for more information.*
 
-**save_writer(line, num)** | **savesys.writer(line, num)** scans the line and new number you pass in, and writes to the file accordingly.
+**save_writer(line, num)** scans the line and new number you pass in, and writes to the file accordingly.
 
 # Install
 
@@ -35,6 +35,10 @@ Savesys uses an external text file for managing variables. It's called by a coup
 ### Python
 
 #### Move "savesys.py" into your project.
+
+### Rust
+
+#### Move "savesys.rs" into your project.
 
 ### Shell
 
@@ -65,6 +69,13 @@ save_writer(5, 7);
 ```
 import savesys
 savesys.writer(5, 7)
+```
+
+## Rust
+
+```
+mod savesys;
+savesys::writer(5, 7)
 ```
 
 ## Shell
