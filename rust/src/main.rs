@@ -1,5 +1,5 @@
 use std::fs::File;
-use std::io::Write;
+use std::io::{prelude::*, Write, BufReader};
 use std::path::Path;
 
 // BEGIN CONFIG //
@@ -9,25 +9,31 @@ static SAVE_SIZE: i32          = 20;
 
 // END CONFIG //
 
+fn save_reader() -> Vec<i32> {
+    let file = File::open(SAVE_NAME).unwrap();
+    let v: Vec<i32> = BufReader::new(file)
+        .lines()
+        .flatten()
+        .flat_map(|line| line.parse::<i32>())
+        .collect();
+    return v;
+}
+
 fn save_generate() {
-    println!("Creating file: ./{}", SAVE_NAME);
     let mut file = File::create(SAVE_NAME).unwrap();
-    println!("Begin file write loop");
     for i in 0..SAVE_SIZE {
-        println!("Writing to line {}", i);
         file.write(b"0\n").unwrap();
     }
 }
 
 fn save_exists() {
     if Path::new(SAVE_NAME).exists() == false {
-        println!("File does not exist, calling generator");
         save_generate();
-    } else {
-        println!("File already exists");
     }
 }
 
 fn main() {
     save_exists();
+    let i = save_reader();
+    println!("{}", i[2]);
 }
