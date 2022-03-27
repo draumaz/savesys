@@ -2,7 +2,7 @@
 name = "savesys"
 version = "3.5.0"
 license = "GPL-3.0"
-keywords = ["gamedev", "save management", "save system"]
+keywords = ["gamedev", "save-management", "save-system"]
 categories = ["game-development", "filesystem"]
 edition = "2021"
 
