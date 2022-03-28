@@ -75,7 +75,7 @@ savesys.writer(5, 7)
 
 ```
 use savesys;
-savesys::writer("data.txt", 5, 7)
+savesys::writer("data.txt", 5, 7);
 ```
 
 ## Shell
