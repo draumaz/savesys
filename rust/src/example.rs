@@ -1,14 +1,14 @@
 mod savesys;
 
 fn main() {
-    savesys::exists(); // Generate/check file
+    savesys::exists("data.txt", 20); // Generate/check file (20 is the length of the file)
 
-    let mut i = savesys::reader(); // Store reader vector in i
+    let mut i = savesys::reader("data.txt"); // Store reader vector in i
     println!("- Line two: {}\n- calling save_writer(2, 7)", i[2]);
 
-    savesys::writer(2, 7); // Write variable 7 to line 2
+    savesys::writer("data.txt", 2, 7); // Write variable 7 to line 2
 
-    i = savesys::reader(); // Recall
+    i = savesys::reader("data.txt"); // Recall
 
     println!("- Line two: {}", i[2]);
 }
