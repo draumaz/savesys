@@ -1,4 +1,4 @@
-mod savesys;
+use savesys;
 
 fn main() {
     savesys::exists("data.txt", 20); // Generate/check file (20 is the length of the file)

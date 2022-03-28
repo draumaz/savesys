@@ -1,13 +1,13 @@
 [package]
 name = "savesys"
-version = "3.5.3"
+version = "3.5.4"
 license = "GPL-3.0"
 description = "Variable-based save management system"
 keywords = ["gamedev", "save-management", "save-system"]
 categories = ["game-development", "filesystem"]
 edition = "2021"
 
-exclude = ["src/example.rs"]
+exclude = ["src/main.rs"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
