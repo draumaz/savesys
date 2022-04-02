@@ -1,5 +1,5 @@
 # Savesys, an easily-implementable save manager
-# draumaz, 2021 | GPL v3
+# draumaz, 2021 | MIT
 
 import os
 
