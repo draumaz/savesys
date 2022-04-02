@@ -1,6 +1,4 @@
-<p align="center">
-  <img width="369" height="166" src=https://github.com/draumaz/savesys/blob/main/logo.png?raw>
-</p>
+![Logo](https://github.com/draumaz/savesys/blob/main/logo.png?raw=true "Logo")
 
 A simple, expandable, variable-based save system.
 
