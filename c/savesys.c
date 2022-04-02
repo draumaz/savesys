@@ -1,5 +1,5 @@
 // Savesys, an easily-implementable save manager
-// draumaz, 2022 | GPL v3
+// draumaz, 2022 | MIT
 
 // CONFIG START //
 #define SAVE_LENGTH 12
