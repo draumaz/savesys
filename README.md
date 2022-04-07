@@ -36,7 +36,7 @@ Savesys uses an external text file for managing variables. It's called by a coup
 #### Add the following line to your Cargo.toml file.
 ```
 [dependencies]
-savesys = "3.5.0"
+savesys = "3.5.6"
 ```
 ### Shell
 
