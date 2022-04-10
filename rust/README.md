@@ -1,7 +1,3 @@
-<p align="center">
-  <img width="369" height="166" src=https://github.com/draumaz/savesys/blob/main/logo.png?raw>
-</p>
-
 A simple, expandable, variable-based save system.
 
 Forked from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
@@ -20,6 +16,11 @@ Savesys uses an external text file for managing variables. It's called by a coup
 ## Example Usage
 
 ```
-use savesys;
+extern crate savesys;
+use savesys::*;
+
+savesys::exists("data.txt", 20);
 savesys::writer("data.txt", 5, 7);
+
+let save_vec: Vec<i32> = savesys::reader("data.txt");
 ```
