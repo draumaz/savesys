@@ -1,6 +1,6 @@
 [package]
 name = "savesys"
-version = "3.5.6"
+version = "3.5.7"
 license = "MIT"
 description = "Variable-based save management system"
 keywords = ["gamedev", "save-management", "save-system"]
