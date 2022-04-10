@@ -23,62 +23,10 @@ Savesys uses an external text file for managing variables. It's called by a coup
 
 #### Move "savesys.c" & "savesys.h" into your project.
 
-### C++
-
-#### Move "savesys.cpp" & "savesys.hpp" into your project.
-
-### Python
-
-#### Move "savesys.py" into your project.
-
 ### Rust
 
 #### Add the following line to your Cargo.toml file.
 ```
 [dependencies]
-savesys = "3.5.6"
-```
-### Shell
-
-#### Move "savesys.sh" into your project.
-
-# Usage Example
-
-You want to change the variable on line six to '7'.
-
-*NOTE: line counts from zero; for line six, you will want to write the numeral 5.*
-
-## C
-
-```
-#include "savesys.h"
-save_writer(5, 7);
-```
-
-## C++
-
-```
-#include "savesys.hpp"
-save_writer(5, 7);
-```
-
-## Python
-
-```
-import savesys
-savesys.writer(5, 7)
-```
-
-## Rust
-
-```
-use savesys;
-savesys::writer("data.txt", 5, 7);
-```
-
-## Shell
-
-```
-source ./savesys.sh
-save_writer 5 7
+savesys = "3.5.7"
 ```
