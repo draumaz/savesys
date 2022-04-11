@@ -21,8 +21,9 @@ Savesys uses an external text file for managing variables. It's called by a coup
 extern crate savesys;
 use savesys::*;
 
-savesys::exists("data.txt", 20);
-savesys::writer("data.txt", 5, 7);
+if exists("data.txt") == false { generate("data.txt", 20) };
+
+writer("data.txt", 5, 7);
 
 let save_vec: Vec<i32> = savesys::reader("data.txt");
 ```

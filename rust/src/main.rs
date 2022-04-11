@@ -1,15 +1,18 @@
 extern crate savesys;
-use savesys::{reader, writer, exists};
+
+use savesys::*;
 
 fn main() {
-    savesys::exists("data.txt", 20); // Generate/check file (20 is the length of the file)
+    if exists("data.txt") == false { // Check/generate file (20 is the length of the file)
+        generate("data.txt", 20); 
+    }
+    let mut save: Vec<i32> = savesys::reader("data.txt"); // Store reader vector in i
+    
+    println!("- Line two: {}\n- calling save_writer(2, 7)", save[2]);
 
-    let mut i: <Vec:i32> = savesys::reader("data.txt"); // Store reader vector in i
-    println!("- Line two: {}\n- calling save_writer(2, 7)", i[2]);
+    writer("data.txt", 2, 7); // Write variable 7 to line 2
 
-    savesys::writer("data.txt", 2, 7); // Write variable 7 to line 2
+    save = reader("data.txt"); // Recall
 
-    i = savesys::reader("data.txt"); // Recall
-
-    println!("- Line two: {}", i[2]);
+    println!("- Line two: {}", save[2]);
 }

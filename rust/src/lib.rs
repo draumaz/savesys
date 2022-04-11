@@ -27,8 +27,6 @@ pub fn generate(save_name: &'static str, save_size: i32) {
     }
 }
 
-pub fn exists(save_name: &'static str, save_size: i32) {
-    if Path::new(save_name).exists() == false {
-        generate(save_name, save_size);
-    }
+pub fn exists(save_name: &'static str) -> bool {
+    return Path::new(save_name).exists() == false;
 }
