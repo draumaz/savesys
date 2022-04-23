@@ -5,7 +5,7 @@ license = "MIT"
 description = "Variable-based save management system"
 keywords = ["gamedev", "save-management", "save-system"]
 categories = ["game-development", "filesystem"]
-edition = "2021"
+edition = "2018"
 
 exclude = ["src/main.rs"]
 
