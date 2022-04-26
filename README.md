@@ -17,8 +17,6 @@ Savesys uses an external text file for managing variables. It's called by a coup
 
 # Install
 
-#### First - clone the repo, and find the folder pertaining to the language you're going to use.
-
 ### C
 
 #### Move "savesys.c" & "savesys.h" into your project.
