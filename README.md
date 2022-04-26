@@ -23,7 +23,7 @@ Savesys uses an external text file for managing variables. It's called by a coup
 
 ### Rust
 
-#### Add the following line to your Cargo.toml file.
+#### Add the following to your Cargo.toml file.
 ```
 [dependencies]
 savesys = "3.5.9"
