@@ -2,10 +2,6 @@
 
 A simple, expandable, variable-based save system.
 
-## IMPORTANT MESSAGE FOR C PORT:
-## Open savesys.c and change the config macros
-## to what you'd like them to be.
-
 Forked from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
 
 # Purpose
@@ -20,6 +16,9 @@ Savesys uses an external text file for managing variables. It's called by a coup
 - ```save_writer(line, num)``` scans the line and new number you pass in, and writes to the file.
 
 ## Example Usage
+
+## IMPORTANT MESSAGE FOR C PORT:
+- Open savesys.c and change the config macros to what you'd like them to be.
 
 ```
 #include "savesys.h"
