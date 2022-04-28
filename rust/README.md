@@ -10,10 +10,10 @@ Savesys uses an external text file for managing variables. It's called by a coup
 
 # Functions
 
-- The ***generator*** is used to generate the save file. Save name and length are fully configurable.
-- The ***existence checker*** checks to see if the file exists and generates one if not.
-- The ***reader*** scans the file and returns numbers from the lines into an array. *You will need to adjust the array count to match your variables, view the documentation appropriate for your language of choice for more information.*
-- The ***writer*** scans the line and new number you pass in, and writes to the file accordingly.
+- ```generate(SAVE_NAME: &'static str, num: i32)``` is used to generate the save file.
+- ```exists(SAVE_NAME: &'static str)``` checks to see if the file exists and returns a corresponding boolean.
+- ```reader(SAVE_NAME: &'static str)``` scans SAVE_NAME and returns the numbers from the file into a Vec<i32>.
+- ```writer(SAVE_NAME: &'static str, line: usize, state: i32)``` scans the line and new number you pass in, and writes to the file.
 
 ## Example Usage
 
