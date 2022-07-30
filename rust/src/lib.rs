@@ -1,6 +1,4 @@
-use std::fs::{File, OpenOptions};
-use std::io::{prelude::*, Write, BufReader};
-use std::path::Path;
+use std::{fs::{File, OpenOptions}, io::{Write, BufRead, BufReader}, path::Path};
 
 pub fn reader(save_name: &'static str) -> Vec<i32> {
     let file = File::open(save_name).expect("Couldn't open file for reading");
@@ -13,7 +11,10 @@ pub fn reader(save_name: &'static str) -> Vec<i32> {
 
 pub fn writer(save_name: &'static str, line: usize, state: i32) {
     let mut read = reader(save_name);
-    let mut file = OpenOptions::new().write(true).open(save_name).expect("Couldn't open file for writing");
+    let mut file = OpenOptions::new()
+        .write(true)
+        .open(save_name)
+        .expect("Couldn't open file for writing");
     read[line] = state;
     for i in read {
         write!(file, "{}\n", i).expect("Couldn't write to file.");
@@ -27,6 +28,4 @@ pub fn generate(save_name: &'static str, save_size: i32) {
     }
 }
 
-pub fn exists(save_name: &'static str) -> bool {
-    return Path::new(save_name).exists();
-}
+pub fn exists(save_name: &'static str) -> bool { Path::new(save_name).exists() }
