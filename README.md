@@ -1,4 +1,4 @@
-![Logo](https://github.com/draumaz/savesys/blob/main/logo.png?raw=true "Logo")
+# Savesys
 
 A simple, expandable, variable-based save system.
 
