@@ -2,7 +2,7 @@
 
 A simple, expandable, variable-based save system.
 
-Forked from the save system used in my other project, [The Plains](https://github.com/draumaz/plains).
+Forked from the save system used in my other project, [The Plains](https://git.goatopossum.com/draumaz/plains).
 
 # Purpose
 
@@ -26,5 +26,5 @@ Savesys uses an external text file for managing variables. It's called by a coup
 #### Add the following to your Cargo.toml file.
 ```
 [dependencies]
-savesys = "3.5.10"
+savesys = "3.5.11"
 ```
