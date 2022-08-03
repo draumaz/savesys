@@ -4,16 +4,12 @@ A simple, expandable, variable-based save system.
 
 Forked from the save system used in my other project, [The Plains](https://git.goatopossum.com/draumaz/plains).
 
-# Purpose
-
-Savesys uses an external text file for managing variables. It's called by a couple commands that create files that you can later reference.
-
 # Functions
 
-- The ***generator*** is used to generate the save file. Save name and length are fully configurable.
-- The ***existence checker*** checks to see if the file exists and generates one if not.
-- The ***reader*** scans the file and returns numbers from the lines into an array. *You will need to adjust the array count to match your variables, view the documentation appropriate for your language of choice for more information.*
-- The ***writer*** scans the line and new number you pass in, and writes to the file accordingly.
+- ```generate()``` is self-explanatory.
+- ```exists()``` checks to see if the save file exists and returns the corresponding boolean.
+- ```reader()``` scans the file and returns the numbers from the file into a Vec<i32>.
+- ```writer()``` scans the line and new number passed in, and writes to SAVE_NAME.
 
 # Install
 
